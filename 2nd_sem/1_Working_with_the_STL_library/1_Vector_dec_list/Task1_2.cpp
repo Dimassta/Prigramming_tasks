@@ -1,4 +1,4 @@
-// Дана последовательность целых чисел. Удалить все минимальные элементы.
+// Р”Р°РЅР° РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ С†РµР»С‹С… С‡РёСЃРµР». РЈРґР°Р»РёС‚СЊ РІСЃРµ РјРёРЅРёРјР°Р»СЊРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹.
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -6,18 +6,18 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "rus");
-	int n; cout << "кол-во эл-ов в последовательности = ";  cin >> n;// вводим n
+	int n; cout << "РєРѕР»-РІРѕ СЌР»-РѕРІ РІ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё = ";  cin >> n;// РІРІРѕРґРёРј n
 
-	vector <int> vec;				// создаём вектор
+	vector <int> vec;				// СЃРѕР·РґР°С‘Рј РІРµРєС‚РѕСЂ
 	int x;
-	for (int i = 0; i < n; i++) {	// заполняем вектор
+	for (int i = 0; i < n; i++) {	// Р·Р°РїРѕР»РЅСЏРµРј РІРµРєС‚РѕСЂ
 		cin >> x;
 		vec.push_back(x);
 	}
-	int Min = *min_element(vec.begin(), vec.end());					// находим минимальный элемент
+	int Min = *min_element(vec.begin(), vec.end());					// РЅР°С…РѕРґРёРј РјРёРЅРёРјР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚
 	vector<int>::iterator it = remove(vec.begin(), vec.end(), Min );
-	vec.erase(it, vec.end());										// удаляем минимальные элементы вектора
-	for (vector<int>::iterator iter = vec.begin(); iter != vec.end(); iter++)// выводим новый вектор
+	vec.erase(it, vec.end());										// СѓРґР°Р»СЏРµРј РјРёРЅРёРјР°Р»СЊРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ РІРµРєС‚РѕСЂР°
+	for (vector<int>::iterator iter = vec.begin(); iter != vec.end(); iter++)// РІС‹РІРѕРґРёРј РЅРѕРІС‹Р№ РІРµРєС‚РѕСЂ
 		cout << *iter << " ";
 	return 0;
 }
